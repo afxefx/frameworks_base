@@ -6011,6 +6011,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 // the service.
                 mHandler.postDelayed(mScreenrecordTimeout, 31 * 60 * 1000);
             }
+        }
 
     private void setVolumeWakeTriggered(final int keyCode, boolean triggered) {
         switch (keyCode) {
