@@ -3661,6 +3661,7 @@ public final class ActivityManagerService extends ActivityManagerNative
                 cleanUpApplicationRecordLocked(oldApp, false, false, -1,
                         true /*replacingPid*/);
             }
+            synchronized (mPidsSelfLocked) {
                 this.mPidsSelfLocked.put(startResult.pid, app);
                 if (isActivityProcess) {
                     Message msg = mHandler.obtainMessage(PROC_START_TIMEOUT_MSG);
